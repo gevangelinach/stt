@@ -29,7 +29,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY app.py .
 
 # Expose Flask port (use 6001 for consistency)
-EXPOSE 6001
+EXPOSE 8001
 
 # Health check with startup grace period
 #HEALTHCHECK --interval=30s --timeout=20s --start-period=60s --retries=3 \
