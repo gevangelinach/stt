@@ -6,11 +6,11 @@ from faster_whisper import WhisperModel
 app = Flask(__name__)
 
 # Load Whisper model with GPU (fallback to CPU if needed)
-try:
-    model = WhisperModel("large-v3", device="cuda", compute_type="float16")
-except Exception as e:
-    print(f"CUDA initialization failed: {e}. Falling back to CPU.")
-    model = WhisperModel("large-v3", device="cpu", compute_type="float32")
+# try:
+model = WhisperModel("large-v3", device="cuda", compute_type="float16")
+# except Exception as e:
+#     print(f"CUDA initialization failed: {e}. Falling back to CPU.")
+#     model = WhisperModel("large-v3", device="cpu", compute_type="float32")
 
 
 def transcribe_audio(audio_path):
